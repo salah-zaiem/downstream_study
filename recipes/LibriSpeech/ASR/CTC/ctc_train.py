@@ -305,7 +305,6 @@ if __name__ == "__main__":
     from librispeech_prepare import prepare_librispeech  # noqa
 
     # multi-gpu (ddp) save data preparation
-    """
     run_on_main(
         prepare_librispeech,
         kwargs={
@@ -319,7 +318,6 @@ if __name__ == "__main__":
             "skip_prep": hparams["skip_prep"],
         },
     )
-    """
 
     # here we create the datasets objects as well as tokenization and encoding
     train_data, valid_data, test_datasets, label_encoder = dataio_prepare(
